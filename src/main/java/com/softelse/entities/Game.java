@@ -3,6 +3,7 @@ package com.softelse.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,7 +19,8 @@ public class Game implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
-	private Integer ano;
+	@Column(name = "game_year")
+	private Integer year;
 	private String genre;
 	private String platforms;
 	private Double score;
@@ -30,12 +32,12 @@ public class Game implements Serializable{
 		
 	}
 
-	public Game(Long id, String title, Integer ano, String genre, String platforms, Double score, String imgUrl,
+	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
 		super();
 		this.id = id;
 		this.title = title;
-		this.ano = ano;
+		this.year = year;
 		this.genre = genre;
 		this.platforms = platforms;
 		this.score = score;
@@ -61,11 +63,11 @@ public class Game implements Serializable{
 	}
 
 	public Integer getYear() {
-		return ano;
+		return year;
 	}
 
 	public void setYear(Integer year) {
-		this.ano = year;
+		this.year = year;
 	}
 
 	public String getGenre() {
