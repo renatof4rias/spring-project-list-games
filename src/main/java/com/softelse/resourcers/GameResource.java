@@ -23,6 +23,4 @@ public class GameResource {
 		List<GameMinDTO> result = gameService.findAll();
 		return ResponseEntity.ok().body(result);
 	}
-	
-	
 }
