@@ -21,6 +21,7 @@ public class GameResource {
 	@GetMapping
 	public ResponseEntity<List<GameMinDTO>> findAll(){
 		List<GameMinDTO> result = gameService.findAll();
+		
 		return ResponseEntity.ok().body(result);
 	}
 	
