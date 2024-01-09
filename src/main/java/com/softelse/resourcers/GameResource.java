@@ -19,17 +19,17 @@ public class GameResource {
 
 	@Autowired
 	private GameService gameService;
-	
+
 	@GetMapping
-	public ResponseEntity<List<GameMinDTO>> findAll(){
+	public ResponseEntity<List<GameMinDTO>> findAll() {
 		List<GameMinDTO> result = gameService.findAll();
 		return ResponseEntity.ok().body(result);
 	}
-	
+
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<GameDTO> findById(@PathVariable Long id){
+	public ResponseEntity<GameDTO> findById(@PathVariable Long id) {
 		GameDTO result = gameService.findById(id);
 		return ResponseEntity.ok().body(result);
 	}
-	
+
 }

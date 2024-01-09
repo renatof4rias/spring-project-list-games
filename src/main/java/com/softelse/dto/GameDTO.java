@@ -17,7 +17,7 @@ public class GameDTO {
 	private String longDescription;
 
 	public GameDTO() {
-		
+
 	}
 
 	public GameDTO(Game entity) {
@@ -95,5 +95,5 @@ public class GameDTO {
 	public void setLongDescription(String longDescription) {
 		this.longDescription = longDescription;
 	}
-	
+
 }

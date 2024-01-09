@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.softelse.entities.Game;
 import com.softelse.projections.GameMinProjection;
 
-public interface GameRepository extends JpaRepository<Game, Long>{
+public interface GameRepository extends JpaRepository<Game, Long> {
 
 	@Query(nativeQuery = true, value = """
 			SELECT tb_game.id, tb_game.title, tb_game.game_year AS `year`, tb_game.img_url AS imgUrl,
@@ -19,5 +19,5 @@ public interface GameRepository extends JpaRepository<Game, Long>{
 			ORDER BY tb_belonging.position
 				""")
 	List<GameMinProjection> searchByList(Long listId);
-	
+
 }

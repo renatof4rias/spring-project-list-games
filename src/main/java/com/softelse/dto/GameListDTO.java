@@ -7,9 +7,9 @@ import com.softelse.entities.GameList;
 public class GameListDTO {
 	private Long id;
 	private String name;
-	
+
 	public GameListDTO() {
-		
+
 	}
 
 	public GameListDTO(GameList entity) {
@@ -31,5 +31,5 @@ public class GameListDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 }

@@ -12,9 +12,9 @@ public class GameMinDTO {
 	private String shortDescription;
 
 	public GameMinDTO() {
-		
+
 	}
-	
+
 	public GameMinDTO(Game entity) {
 		this.id = entity.getId();
 		this.title = entity.getTitle();
@@ -22,7 +22,7 @@ public class GameMinDTO {
 		this.imgUrl = entity.getImgUrl();
 		this.shortDescription = entity.getShortDescription();
 	}
-	
+
 	public GameMinDTO(GameMinProjection projection) {
 		this.id = projection.getId();
 		this.title = projection.getTitle();
@@ -50,5 +50,5 @@ public class GameMinDTO {
 	public String getShortDescription() {
 		return shortDescription;
 	}
-	
+
 }
